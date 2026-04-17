@@ -1,0 +1,75 @@
+baseURL = "https://columbium-io.github.io/"
+languageCode = "en-us"
+title = "Columbium Technologies"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+buildDrafts   = false
+buildFuture   = false
+
+[minify]
+  disableXML  = true
+  minifyOutput = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style     = "dracula"
+
+[params]
+  description   = "Outcome-driven AI/ML research. We fuse physical science with scalable engineering to deliver measurable results for clients who demand rigor."
+  author        = "Columbium Technologies"
+  defaultTheme  = "dark"
+  ShowReadingTime       = true
+  ShowShareButtons      = false
+  ShowPostNavLinks      = true
+  ShowBreadCrumbs       = false
+  ShowCodeCopyButtons   = true
+  ShowRssButtonInSectionTermList = false
+  ShowFullTextinRSS     = false
+  hideSummary   = false
+  comments      = false
+  mainSections  = ["posts"]
+#  [params.footer]
+#    text    = "hello"
+
+  [params.label]
+    text      = ""
+    icon      = "/logo.png"
+    iconHeight = 40
+
+  [params.homeInfoParams]
+    Title   = "Columbium Technologies"
+    Content = """
+Outcome-driven AI/ML research and product development for intelligent homes and families. \
+We fuse deep science, smart learning program, and scalable engineering \
+to deliver **measurable results** to our customers and clients.
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url  = "https://github.com/columbium-io"
+
+  [[params.socialIcons]]
+    name = "email"
+    url  = "mailto:hello@columbium.io"
+
+[outputs]
+  home    = ["HTML", "RSS", "JSON"]
+  page    = ["HTML"]
+  section = ["HTML", "RSS"]
+
+[[menus.main]]
+  identifier = "research"
+  name       = "Research"
+  url        = "/posts/"
+  weight     = 10
+
+[[menus.main]]
+  identifier = "about"
+  name       = "About"
+  url        = "/about/"
+  weight     = 20

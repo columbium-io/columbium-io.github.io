@@ -1,0 +1,283 @@
+/* ── Columbium — 2026 Redesign ──────────────────────────────────────────── */
+
+/* ── Layout & base ───────────────────────────────────────────────────────── */
+:root {
+  --main-width:  900px;
+  --gap:         32px;
+  --content-gap: 20px;
+}
+
+html { font-size: 15px; }
+
+body, .entry-content, .post-content, p, li {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+  letter-spacing: 0.005em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+code, pre, .highlight, kbd {
+  font-family: "JetBrains Mono", "Fira Code", monospace !important;
+  font-size: 0.875em;
+}
+
+/* ── Palette ─────────────────────────────────────────────────────────────── */
+:root {
+  --theme:     #0b0b0d;
+  --entry:     #131316;
+  --primary:   #eaeaec;
+  --secondary: #7c8089;
+  --border:    #1f1f24;
+  --content:   #eaeaec;
+  --hljs-bg:   #131316;
+  --code-bg:   #131316;
+  --accent:    #d97706;
+  color-scheme: dark;
+}
+
+/* Force dark — no light variant */
+:root[data-theme="light"] {
+  --theme:     #0b0b0d;
+  --entry:     #131316;
+  --primary:   #eaeaec;
+  --secondary: #7c8089;
+  --border:    #1f1f24;
+  --content:   #eaeaec;
+  --hljs-bg:   #131316;
+  --code-bg:   #131316;
+  --accent:    #d97706;
+  color-scheme: dark;
+}
+
+/* ── Links ───────────────────────────────────────────────────────────────── */
+a, a:visited { color: var(--accent); }
+a:hover      { color: #f0a840; }
+.logo a      { color: var(--primary); }
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+header.header {
+  border-top:    none;
+  border-bottom: 1px solid var(--border);
+  background:    var(--theme);
+}
+
+.logo img  { height: 34px; width: auto; }
+.logo span { font-size: 0.9rem; font-weight: 500; }
+
+#menu a {
+  color: var(--secondary);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: "DM Sans", sans-serif;
+}
+#menu a:hover          { color: var(--primary); }
+#menu a span.active    { color: var(--primary); }
+
+/* ── Home hero ───────────────────────────────────────────────────────────── */
+.first-entry.home-info {
+  background:    none;
+  border:        none;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding:       3.5rem 0 2.75rem;
+  margin-bottom: 2rem;
+}
+
+.first-entry.home-info header h1 {
+  font-size:     2.2rem;
+  font-weight:   500;
+  color:         var(--primary);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  line-height:   1.15;
+}
+
+.first-entry.home-info .entry-content {
+  color:      var(--secondary);
+  font-size:  1rem;
+  line-height: 1.8;
+  max-width:  600px;
+}
+
+.first-entry.home-info .entry-footer { margin-top: 1.75rem; }
+
+/* ── Active Research Tracks ──────────────────────────────────────────────── */
+.home-tracks { margin-bottom: 0; }
+
+.home-tracks h3 {
+  font-size:      0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color:          var(--secondary);
+  font-weight:    500;
+  font-family:    "DM Sans", sans-serif;
+  opacity:        0.7;
+  margin-bottom:  0;
+}
+
+.research-track {
+  border-top:  1px solid var(--border);
+  padding:     1.3rem 0;
+  background:  none;
+  border-left: none;
+  border-radius: 0;
+  font-size:   0.9rem;
+  line-height: 1.7;
+  color:       var(--secondary);
+}
+.research-track:last-of-type { border-bottom: 1px solid var(--border); }
+.research-track strong {
+  display:     block;
+  color:       var(--primary);
+  font-weight: 500;
+  font-size:   0.97rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ── "Recent Research" label ─────────────────────────────────────────────── */
+.recent-posts-heading {
+  font-size:      0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color:          var(--secondary);
+  margin:         2rem 0 0;
+  font-weight:    500;
+  font-family:    "DM Sans", sans-serif;
+  opacity:        0.7;
+}
+
+/* ── Post cards — editorial list ─────────────────────────────────────────── */
+.post-entry {
+  border:        none;
+  border-top:    1px solid var(--border);
+  border-radius: 0;
+  background:    none;
+  padding:       1.4rem 0;
+  transition:    none;
+}
+.post-entry:last-of-type { border-bottom: 1px solid var(--border); }
+
+.entry-header h2 {
+  font-size:      1.0rem;
+  font-weight:    500;
+  letter-spacing: -0.01em;
+  color:          var(--primary);
+  transition:     color 0.1s ease;
+}
+.post-entry:hover .entry-header h2 { color: var(--accent); }
+
+.entry-content p {
+  font-size:   0.88rem;
+  color:       var(--secondary);
+  line-height: 1.65;
+  margin-top:  0.3rem;
+}
+
+.entry-footer, .post-meta {
+  font-size: 0.74rem;
+  color:     var(--secondary);
+  opacity:   0.65;
+  margin-top: 0.4rem;
+}
+
+/* ── Code ────────────────────────────────────────────────────────────────── */
+code {
+  background:    var(--entry);
+  border:        1px solid var(--border);
+  color:         #f0a840;
+  border-radius: 3px;
+}
+pre code { color: var(--primary); border: none; background: none; }
+.highlight {
+  background:    var(--entry) !important;
+  border:        1px solid var(--border);
+  border-radius: 5px;
+}
+
+/* ── Blockquote ──────────────────────────────────────────────────────────── */
+blockquote {
+  border-left:   2px solid var(--border);
+  background:    none;
+  border-radius: 0;
+  font-style:    normal;
+  color:         var(--secondary);
+  font-size:     0.95rem;
+  padding-left:  1.25rem;
+  margin-left:   0;
+}
+
+/* ── HR ──────────────────────────────────────────────────────────────────── */
+hr { border-color: var(--border); }
+
+/* ── Tables ──────────────────────────────────────────────────────────────── */
+table th {
+  font-family:    "DM Sans", sans-serif;
+  font-size:      0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background:     var(--entry);
+  color:          var(--secondary);
+  font-weight:    500;
+}
+table tr:nth-child(even) { background: var(--entry); }
+table td, table th { font-size: 0.9rem; }
+
+/* ── MathJax ─────────────────────────────────────────────────────────────── */
+mjx-container { overflow-x: auto; max-width: 100%; }
+mjx-container[display="true"] { padding: 0.75rem 0; }
+
+/* ── Footer ──────────────────────────────────────────────────────────────── */
+footer.footer {
+  border-top: 1px solid var(--border);
+  font-size:  0.74rem;
+  color:      var(--secondary);
+  opacity:    0.7;
+}
+footer.footer a       { color: var(--secondary); }
+footer.footer a:hover { color: var(--primary); }
+
+/* ── Social icons ────────────────────────────────────────────────────────── */
+.social-icons a svg       { fill: var(--secondary); }
+.social-icons a:hover svg { fill: var(--primary); }
+
+/* ── Theme toggle ────────────────────────────────────────────────────────── */
+.theme-toggle svg       { stroke: var(--secondary); }
+.theme-toggle:hover svg { stroke: var(--primary); }
+
+/* ── Section page heading ────────────────────────────────────────────────── */
+.page-header h1 {
+  font-size:      1.5rem;
+  font-weight:    500;
+  letter-spacing: -0.02em;
+  color:          var(--primary);
+  text-transform: none;
+  font-family:    "DM Sans", sans-serif;
+}
+
+/* ── Single post ─────────────────────────────────────────────────────────── */
+.post-header .post-title,
+.post-title {
+  font-size:      1.9rem;
+  font-weight:    500;
+  letter-spacing: -0.025em;
+  line-height:    1.2;
+}
+
+.post-content            { font-size: 0.97rem; line-height: 1.85; }
+.post-content h2         { font-size: 1.2rem;  margin-top: 2.5rem; }
+.post-content h3         { font-size: 1.05rem; margin-top: 2rem; }
+
+/* ── About / single page tables ─────────────────────────────────────────── */
+.post-content table {
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.post-content table td:first-child { color: var(--primary); font-weight: 500; }
