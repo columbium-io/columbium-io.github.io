@@ -1,4 +1,4 @@
-baseURL = "https://columbium-io.github.io/"
+baseURL = "https://columbium.io/"
 languageCode = "en-us"
 title = "Columbium Technologies"
 theme = "PaperMod"
