@@ -20,9 +20,9 @@ buildFuture   = false
     style     = "dracula"
 
 [params]
-  description   = "Outcome-driven AI/ML research. We fuse physical science with scalable engineering to deliver measurable results for clients who demand rigor."
+  description   = "AI builds fast. We prove it works. Columbium is an AI start-up: senior engineers direct AI agents to build production software in weeks, with the tests that prove it."
   author        = "Columbium Technologies"
-  defaultTheme  = "dark"
+  defaultTheme  = "auto"
   ShowReadingTime       = true
   ShowShareButtons      = false
   ShowPostNavLinks      = true
@@ -42,11 +42,11 @@ buildFuture   = false
     iconHeight = 40
 
   [params.homeInfoParams]
-    Title   = "Columbium Technologies"
+    Eyebrow = "AI-native software engineering"
+    Title   = "AI builds fast.<br><span class=\"accent\">We prove it works.</span>"
     Content = """
-Outcome-driven AI/ML research and product development for intelligent homes and families. \
-We fuse deep science, smart learning program, and scalable engineering \
-to deliver **measurable results** to our customers and clients.
+Columbium is an AI start-up. Senior engineers direct AI agents to build production software in weeks. \
+Each system ships with the tests that prove it works.
 """
 
   [[params.socialIcons]]
@@ -63,13 +63,19 @@ to deliver **measurable results** to our customers and clients.
   section = ["HTML", "RSS"]
 
 [[menus.main]]
-  identifier = "research"
-  name       = "Research"
-  url        = "/posts/"
-  weight     = 10
+  identifier = "work"
+  name       = "Work"
+  url        = "/work/"
+  weight     = 5
 
 [[menus.main]]
   identifier = "about"
   name       = "About"
   url        = "/about/"
   weight     = 20
+
+[[menus.main]]
+  identifier = "contact"
+  name       = "Start a project"
+  url        = "mailto:hello@columbium.io"
+  weight     = 30

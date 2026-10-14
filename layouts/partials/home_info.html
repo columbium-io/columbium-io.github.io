@@ -1,14 +1,14 @@
 {{- with site.Params.homeInfoParams }}
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
-    </header>
-    <div class="entry-content">
-        {{ $opts := dict "display" "block" }}
-        {{ .Content | $.Page.RenderString $opts }}
+<section class="hero">
+  <div class="hero-text">
+    {{- with .Eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .Title | markdownify }}</h1>
+    <div class="hero-sub">{{ .Content | $.Page.RenderString (dict "display" "block") }}</div>
+    <div class="hero-cta">
+      <a class="btn" href="mailto:hello@columbium.io">Start a project →</a>
+      <a class="btn btn-ghost" href="{{ "work/" | relURL }}">See our work</a>
     </div>
-    <footer class="entry-footer">
-        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
-    </footer>
-</article>
+  </div>
+  <div class="hero-art" aria-hidden="true">{{ partial "canyon.html" . }}</div>
+</section>
 {{- end -}}

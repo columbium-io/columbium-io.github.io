@@ -1,36 +1,44 @@
 ---
-title: Our Philosophy
+title: About Columbium
 url: /about/
 ---
 
-Columbium Technologies LLC is a Cincinnati-based research, design, and product development company. We bridge the gap between abstract machine learning and physical reality.
+<p class="lede">AI agents make software fast to build. Engineering discipline makes it safe to use. You need both.</p>
 
-The core thesis: **Domain knowledge and statistical rigor are complements, not substitutes.**
+Columbium Technologies LLC is an AI start-up in Cincinnati. We build AI-powered software for start-ups and small to mid-sized businesses.
 
-We reject the "black-box" application of generic ML pipelines to scientific problems. Instead, we architect models where physical constraints are structurally encoded—via specialized kernel selection, tailored likelihood functions, and conservation-law priors. The result is a system that is physically grounded and robust by design.
+A small senior team with AI agents can now do the work of a much larger team. Many teams that work this way lose quality for speed. We do not. Senior engineers set the architecture and the criteria. AI agents write and test the code to these criteria. We release nothing that we have not verified. Our [case studies](/work/) show the results.
 
----
+## What makes us different
 
-### Core Competencies
-
-| Domain | Methodology & Stack |
+| | |
 |:---|:---|
-| **Surrogate Modeling** | Sequential and adaptive learning, Bayesian Neural Networks, Uncertainty Quantification |
-| **Experimental Design** | Sequential/Adaptive DOE, Expected Improvement (EI), Knowledge Gradient |
-| **Research Automation** | Multi-agent LLM systems, RAG for technical literature, automated data extraction |
-| **High-Performance Computing** | C++20 (Template Meta-programming, SIMD), Python (JAX, PyTorch, DuckDB), cuda |
-| **Production Deployment** | Azure ML, AWS SageMaker, GitHub Actions CI/CD, Containerization |
+| **AI-native** | We use AI agents for all of our daily work. We deliver in weeks. |
+| **Verified** | We set criteria before we write code. In our flagship platform, the test code is as large as the product code. |
+| **Scientific** | We put real-world limits into our models. We do not use black-box pipelines. |
+| **Yours** | You get the code, the tests, the documents and the deployment scripts. |
 
----
+## Our skills
 
-### Engagement Model
+| | |
+|:---|:---|
+| **AI products** | Multimodal LLMs, agentic workflows, low-cost inference, testable AI pipelines |
+| **Data systems** | Event-driven design, correct historical data, Postgres, FastAPI, React |
+| **Validation** | Walk-forward tests, holdout periods, Monte Carlo checks, uncertainty |
+| **Modeling** | Surrogate models, Bayesian neural networks, design of experiments |
+| **Performance** | C++20, SIMD, CUDA, JAX, PyTorch, DuckDB |
+| **Deployment** | Containers, cloud services, CI/CD, monitoring |
 
-We focus on **quantifiable outcomes**. We do not deliver "pilots" or generic reports; we deliver measurable engineering results. If a project's objective cannot be mathematically or operationally quantified at the outset, we will collaborate with you to define those metrics before work begins.
+## How we work
 
----
+1. **Define.** We agree with you on measurable criteria. If necessary, we help you define the metrics first.
+2. **Build.** We deliver working, tested software each week.
+3. **Hand over.** You get all of the code, the tests, the documents and a deployment that you can operate.
 
-### Contact
+We do not deliver pilots or general reports. We deliver measurable engineering results.
 
-For inquiries or discussions, talk to us:
-
-**Email:** [hello@columbium.io](mailto:hello@columbium.io)
+<div class="cta">
+<strong>Tell us what you need.</strong>
+<p>We reply with a plan to measure the result.</p>
+<a class="btn" href="mailto:hello@columbium.io">Start a project →</a>
+</div>

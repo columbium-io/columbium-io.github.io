@@ -46,7 +46,9 @@
   </div>
   {{- end }}
 
-  <h2 class="recent-posts-heading">Recent Research</h2>
+  {{- if $pages }}
+  <h2 class="recent-posts-heading">Lab Notes</h2>
+  {{- end }}
 
   {{- range first 5 $pages }}
   <article class="post-entry">
